@@ -37,11 +37,6 @@ fun main() {
     println(time * 10.0.pow(-9))
     println("Erfüllbar: $works")
 
-    for(i in 0..1_000_000_000) {
-        val t = Thread() {}
-        t.start()
-    }
-
     expr.extendMapping()
     println(expr.mapping)
     Path.of("expr2000-2000-600-mapping.txt").writeText(expr.mapping.toString())
